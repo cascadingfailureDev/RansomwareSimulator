@@ -1,0 +1,21 @@
+name = "RansomwareSimulator"
+uuid = "e4acd26d-e876-43e1-a4a7-61be0eaeaa53"
+authors = ["Andrew Kane <Andrew@CascadingFailure.dev>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Trapz = "592b5752-818d-11e9-1e9a-2b8ca4a44cd1"
+YAML = "ddb6d928-2868-570f-bddf-ab3f9cf99eb6"
+
+[compat]
+julia = "1.5"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
