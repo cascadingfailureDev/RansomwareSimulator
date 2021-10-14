@@ -5,7 +5,7 @@ The Ransomware Simulator is a simple compartmental model extending the SIR (Susc
 
 The simulator uses the following compartments Susceptible, Infected, Encrypted, and Recovered (SIER). 
 
-Unlike traditional infections and the models used to study them, Ransomware Infections have at least 2 distinct phases, an infected & encryption phase, and a separate recovery phase, which occurs some time after the infection has stopped. Due to this pattern, the ransomware simulator is implemented in two phases, a simulation of infection & encryption, and a recovery phase implemented as a resiliency curve.
+Unlike biological infections and the models used to study them, Ransomware Infections have at least 2 distinct phases, an infected & encryption phase, and a separate recovery phase, which occurs some time after the infection has stopped. Due to this pattern, the ransomware simulator is implemented in two phases, a simulation of infection & encryption, and a recovery phase implemented as a resiliency curve.
 
 The Ransomware Simulator also allows a user to easily simulate recovery improvements. To do this the recovery phase is split in to two sub phases: forensics and restoration.
 
@@ -103,14 +103,25 @@ The simulation perameters were left at their default values.
 
 ### Infection Plot
 ![Infection plot](/docs/img/example_infection_plot.png)
+The infection progresses much as a biological disease and shows the signature s-curve that you would expect; the infection starts slow and speeds up during the height of the infection, before slowing down again as the availability of susceptible targets reduces towards 0.
 ### Encrypted Plot
 ![Encrypted plot](/docs/img/example_encrypted_plot.png)
+The encrpytion plot is unusual, it doesn't show the s-cruve you might have expected. This is due to the fact that infection is extremely quick, whereas total encryption is a function of disk size. If you could zoom in on the chart what you would see are 7 smaller s-curves associated with the different disk sizes. 
 ### Encrypted GB plot
 ![Encrypted GB Plot](/docs/img/example_encrypted_gb_plot.png)
+The Encrpyted GB plot is much more in keeping with the infection plots we have all come to know so well, and simply builds overtime. The chart also provides a nieve estimated restoration time based on the time to restore the total encrpyted GB from backup.
 ### Recovery Curve
 ![Recovery Curve](/docs/img/example_recovery_curve.png)
+The first recovery curve ignores any post ante improvements that are to be simulated and gives a baseline against which any improvements can be compared. The recovery curve shows that initial fast drop in functionality has servers become infected. As we have some servers that are not susceptiable, the
+ chart shows that as the drop stops at 12, in this case showing a 12% robustness against the simulated attack.
+The chart then shows a 24 hour period of flat functionality, which corresponds with the forensics investiagtion, before functionality, slowly at first, begins to be restored. The resilience index is a normalized metric that allows different recovery curves to be easily compared.
 ### Post Ante Recovery Curves
 ![post ante recovery curve 1](/docs/img/example_recovery_curve_restore.png)
+This recovery curve compares the base resiliency against a restoration specifc improvement. In this case the concept of Snapshot based recovery was chosen, as it is the shiny new offering from backup vendors. Those same vendors are promising up to 3x faster restoration, so that is the number that was used to created this view. What you see is a much faster restoration, the forensics still takes a full 24 hours, but the curve speeds up quick and reamins faster throughout the restoration phase.
 ![post ante recovery curve 2](/docs/img/example_recovery_curve_forensics.png)
+Improvements in forensics are also becoming more obvious in the marketing of storage vendors; promising to pinpoint the beginning of an infection. None of the vendors are offering improvement numbers, so to keep things interested a 3x improvement was chosen. 
+This improvement reduces the forensics time from 24 hours to 8 hours, as good as that improvement is, it shows almost no impact on the overall recovery time.
 ![post ante recovery curve 3](/docs/img/example_recovery_curve_both.png)
+To show just how little the impact of improving forensics time is. A third improvement was chosen that provides a 1.2x improvement in both forensics and restoration. This much small improvement spread across the full recovery cycle is much more effective than targeting the forensics space alone.
 ![post ante recovery curve 4](/docs/img/example_recovery_curve_combined.png)
+The combined recovery curve is the combined improvement possible by implementing the 3 above improvements.
