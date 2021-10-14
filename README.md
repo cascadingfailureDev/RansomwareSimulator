@@ -137,7 +137,7 @@ The chart then shows a 24 hour period of flat functionality, which corresponds w
 
 ![post ante recovery curve 1](/docs/img/example_recovery_curve_restore.png)
 
-This recovery curve compares the base resiliency against a restoration specifc improvement. In this case the concept of Snapshot based recovery was chosen, as it is the shiny new offering from backup vendors. Those same vendors are promising up to 3x faster restoration, so that is the number that was used to created this view. What you see is a much faster restoration, the forensics still takes a full 24 hours, but the curve speeds up quick and reamins faster throughout the restoration phase.
+This recovery curve compares the base resiliency against a restoration specifc improvement. In this case the concept of Snapshot based recovery was chosen, as it is the shiny new offering from backup vendors. Those same vendors are promising up to 3x faster restoration, so that is the number that was used to created this view. What you see is a much faster restoration, the forensics still takes a full 24 hours, but the curve speeds up quick and remains faster throughout the restoration phase.
 
 ![post ante recovery curve 2](/docs/img/example_recovery_curve_forensics.png)
 
