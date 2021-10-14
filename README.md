@@ -91,4 +91,26 @@ for recovery in recoveries
     display(recovery)
 end
 ```
+## Example output
+As an example of using Ransomware Simulator. An imaginary server estate of 100 servers was created. Of the 100 servers 88 are susceptiable, and 12 are not susceptible.
 
+3 post ante improvements were simulated:
+- a 200% improvement in restoration time
+- a 20% improvement in both forensics and restoration
+- a 200% improvement in forensics
+
+The simulation perameters were left at their default values.
+
+### Infection Plot
+![Infection plot](/docs/img/example_infected_plot.png)
+### Encrypted Plot
+![Encrypted plot](/docs/img/example_infected_plot.png)
+### Encrypted GB plot
+![Encrypted GB Plot](/docs/img/example_infected_gb_plot.png)
+### Recovery Curve
+![Recovery Curve](/docs/img/example_recovery_curve.png)
+### Post Ante Recovery Curves
+![post ante recovery curve 1](/docs/img/example_recovery_curve_restore.png)
+![post ante recovery curve 2](/docs/img/example_recovery_curve_forensics.png)
+![post ante recovery curve 3](/docs/img/example_recovery_curve_both.png)
+![post ante recovery curve 4](/docs/img/example_recovery_curve_combined.png))
