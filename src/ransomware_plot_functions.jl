@@ -90,6 +90,7 @@ function infection_plot(state)
                         ylabel=ylabel,
                         seriestype=:scatter,
                         color=:red,
+                        legend=false,
                         title="Infected Servers")
 end
 
@@ -108,6 +109,7 @@ function encrypted_plot(state)
                         ylabel=ylabel,
                         seriestype=:scatter,
                         color=:red,
+                        legend=false,
                         title="Encrypted Servers")
 end
 
