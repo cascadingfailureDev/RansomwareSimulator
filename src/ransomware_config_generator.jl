@@ -56,7 +56,7 @@ function generate_config(outfile=nothing)
       disk_size_gb: 512
       infected: false
       susceptible: true
- """
+    """
 f = open(outfile, "w")
 write(f, basic_config)
 close(f)
