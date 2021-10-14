@@ -113,4 +113,4 @@ The simulation perameters were left at their default values.
 ![post ante recovery curve 1](/docs/img/example_recovery_curve_restore.png)
 ![post ante recovery curve 2](/docs/img/example_recovery_curve_forensics.png)
 ![post ante recovery curve 3](/docs/img/example_recovery_curve_both.png)
-![post ante recovery curve 4](/docs/img/example_recovery_curve_combined.png))
+![post ante recovery curve 4](/docs/img/example_recovery_curve_combined.png)
