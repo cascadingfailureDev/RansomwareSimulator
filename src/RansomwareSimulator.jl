@@ -28,5 +28,4 @@ module RansomwareSimulator
     include("ransomware_simulation_functions.jl")
     include("ransomware_plot_functions.jl")
     include("ransomware_config_generator.jl")
-
 end

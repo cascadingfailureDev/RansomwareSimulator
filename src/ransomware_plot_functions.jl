@@ -80,7 +80,7 @@ end
     infection_plot(actions)
 Returns plot of infected servers over time, based on data in `actions`
 """
-function infection_plot(actions)
+function infection_plot(state)
     ylabel = "Infected Servers"
     infection_volume, infection_time = getActions(INFECT, state)
     infection_time, xlabel = bestX(infection_time)
@@ -97,7 +97,7 @@ end
     encrypted_plot(actions)
 Returns a plot of fully encrypted servers over time, based on data in `actions`
 """
-function encrypted_plot(actions)
+function encrypted_plot(state)
     ylabel = "Encrypted Servers"
     v_encrypted, t_encrypted = getActions(ENCRYPTED, state)
     t_encrypted, xlabel = bestX(t_encrypted)
@@ -293,7 +293,7 @@ function function_loss_plot(state, parameters, post_ante=nothing)
         return x_recovery_curve
     end
     if !isnothing(post_ante)
-        for x in post_ante
+        for x in parameters.post_ante
             x_plot_name = string(get(x, "name", "Post Ante"),
                                     " Potential Improvement")
             x_forensics_multiplier = 1
@@ -309,11 +309,11 @@ function function_loss_plot(state, parameters, post_ante=nothing)
                                                 parameters)
             push!(recovery_plots, x_recovery_curve)
         end
-        if length(post_ante) > 1
+        if length(parameters.post_ante) > 1
             x_plot_name = "Combined Potential Improvement"
             x_forensics_multiplier = 1
             x_restore_multiplier = 1
-            for x in post_ante
+            for x in parameters.post_ante
                 if "forensics" in get(x, "stages", [])
                     x_forensics_multiplier += get(x, "estimated_improvement", 0)
                 end
