@@ -77,8 +77,8 @@ function bestX(times)
 end
 
 """
-    infection_plot(actions)
-Returns plot of infected servers over time, based on data in `actions`
+    infection_plot(state)
+Returns plot of infected servers over time, based on data in `state.actions`
 """
 function infection_plot(state)
     ylabel = "Infected Servers"
@@ -94,8 +94,8 @@ function infection_plot(state)
 end
 
 """
-    encrypted_plot(actions)
-Returns a plot of fully encrypted servers over time, based on data in `actions`
+    encrypted_plot(state)
+Returns a plot of fully encrypted servers over time, based on data in `state.actions`
 """
 function encrypted_plot(state)
     ylabel = "Encrypted Servers"
