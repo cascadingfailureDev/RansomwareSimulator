@@ -102,11 +102,11 @@ As an example of using Ransomware Simulator. An imaginary server estate of 100 s
 The simulation perameters were left at their default values.
 
 ### Infection Plot
-![Infection plot](/docs/img/example_infected_plot.png)
+![Infection plot](/docs/img/example_infection_plot.png)
 ### Encrypted Plot
-![Encrypted plot](/docs/img/example_infected_plot.png)
+![Encrypted plot](/docs/img/example_encrypted_plot.png)
 ### Encrypted GB plot
-![Encrypted GB Plot](/docs/img/example_infected_gb_plot.png)
+![Encrypted GB Plot](/docs/img/example_encrypted_gb_plot.png)
 ### Recovery Curve
 ![Recovery Curve](/docs/img/example_recovery_curve.png)
 ### Post Ante Recovery Curves
